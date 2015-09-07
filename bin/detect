@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Copy creds to runtime"
+exit 0
