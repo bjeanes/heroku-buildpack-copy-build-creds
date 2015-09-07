@@ -2,4 +2,15 @@
 
 build_dir="$1"
 
-cp -R "$HOME/.ssh" "$HOME/.netrc" "$HOME/.curlrc" "${build_dir}/"
+if [ -d "$HOME/.ssh" ]; then
+    cp -R "$HOME/.ssh" "${build_dir}/"
+fi
+
+if [ -f "$HOME/.netrc" ]; then
+    cp "$HOME/.netrc" "${build_dir}/"
+fi
+
+if [ -f "$HOME/.curlrc" ]; then
+    cp "$HOME/.curlrc" "${build_dir}/"
+fi
+
